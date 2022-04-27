@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaveInfoActivity"
+    android:orientation="vertical">
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/koluman_color"
+        android:title="@string/toolbar_title"
+        android:titleTextColor="@color/white"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <EditText
+                android:id="@+id/saveName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kayıt Adı"
+                android:maxLines="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kayıt Bölgesi"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    />
+                <RadioGroup
+                    android:id="@+id/radioGroupSag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    >
+                    <RadioButton android:id="@+id/radio_sag_on"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sağ Ön"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_sag_orta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sağ Orta"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_sag_arka"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sağ Arka"
+                        android:layout_weight="1"
+                        />
+                </RadioGroup>
+                <RadioGroup
+                    android:id="@+id/radioGroupSol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    >
+                    <RadioButton android:id="@+id/radio_sol_on"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sol Ön"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_sol_orta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sol Orta"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_sol_arka"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="Sol Arka"
+                        android:layout_weight="1"
+                        />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jant Türleri"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupJant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/radio_jant"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jantsa\n(117756)"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_ratex"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Radex" />
+
+                    <RadioButton
+                        android:id="@+id/radio_cemmerz"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lemmerz" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lastik Türleri"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+            <RadioGroup
+                android:id="@+id/radioGroupLastik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3"
+                >
+                <RadioButton android:id="@+id/radio_prielli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:text="Pirelli"
+                    android:layout_weight="1"
+                    />
+                <RadioButton android:id="@+id/radio_brigston"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:text="Bridgestone"
+                    android:layout_weight="1"
+                    />
+                <RadioButton android:id="@+id/radio_goodyear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:text="Goodyear"
+                    android:layout_weight="1"
+                    />
+            </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ebat Bilgileri"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+                <RadioGroup
+                    android:id="@+id/radioGroupEbat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    >
+                    <RadioButton android:id="@+id/radio_ebat1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="385/55"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_ebat2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="385/65"
+                        android:layout_weight="1"
+                        />
+                    <RadioButton android:id="@+id/radio_ebat3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:text="445/45"
+                        android:layout_weight="1"
+                        />
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/rimNameIn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Jant Tipi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/rimButton1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:maxLines="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rimButton1"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_back"
+                    android:text="Jant Tipi Ekle"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/rimNameOut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Jant Numarası"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/rimButton2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:maxLines="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rimButton2"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:text="Jant Numarası Ekle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:background="@drawable/button_back"
+                    android:textColor="@color/white"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/tireName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Lastik Üstü"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tireButton3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:maxLines="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tireButton3"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:text="Lastik Üstü Ekle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/button_back"
+                    android:textColor="@color/white"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saveButton"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:text="Kaydet"
+                    android:background="@drawable/button_back"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/showListButton"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:text="Kaydedilenler"
+                    android:background="@drawable/button_back"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
